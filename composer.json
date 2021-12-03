@@ -1,5 +1,8 @@
 {
     "name": "fkruidhof/adminquickview",
+    "type": "magento2-module",
+    "version": "v0.9.1-beta",
+    "license": "OSL-3.0",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "description": "Magento 2 module to quickly acces products, orders and customer from admin menu",
@@ -12,9 +15,6 @@
         "magento/module-theme": "101.1.2",
         "magento/magento-composer-installer": "*"
     },
-    "type": "magento2-module",
-    "version": "1.0.0",
-    "license": "OSL-3.0",
     "autoload": {
         "files": [
             "registration.php"
