@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* specifically override styling of title, otherwise it will not be displayed */
+.admin__menu .submenu .column:only-of-type .level-1 .submenu-group-title {
+    display: block;
+}
+
+.adminquickview_input_form input {
+    margin: 0.3rem 1.5rem;
+    font-size: 1.6rem;
+    width: 90%;
+}

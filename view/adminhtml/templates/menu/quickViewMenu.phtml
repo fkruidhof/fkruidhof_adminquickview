@@ -1,0 +1,47 @@
+<?php
+use Fkruidhof\AdminQuickView\Block\Adminhtml\Menu\QuickView;
+/** @var QuickView $block */
+?>
+<ul role="menu">
+    <li class="column">
+        <ul role="menu">
+            <?php $count = 0 ?>
+            <?php foreach ($block->getQuickViews() as $command): ?>
+                <?php if ($count && $count%3 === 0): ?>
+                <!-- end column and start new one when more than %3 commands-->
+            </ul>
+        </li>
+        <li class="column">
+            <ul role="menu">
+                <?php endif ?>
+                <?php $customBlock = $command->getCustomBlock() ?>
+                <?php if ($customBlock): ?>
+                    <?= $customBlock->toHtml() ?>
+                <?php else: ?>
+                    <li class="parent level-1" role="menu-item">
+                        <strong class="submenu-group-title" role="presentation"><span><?= $command->getName() ?></span></strong>
+                        <?php foreach ($command->getActions() as $action): ?>
+                                <form action="<?= $block->getSubmitUrl() ?>" method="post"
+                                      class="adminquickview_input_form level-2">
+                                    <input
+                                        name="<?= $block::FORM_INPUT_NAME ?>"
+                                        type="text"
+                                        role="menu-item"
+                                        placeholder="<?= $action ?>"
+                                        minlength="1"
+                                    />
+                                    <input type="hidden" name="<?= $block::FORM_COMMAND_INPUT_NAME ?>"
+                                           value="<?= $command->getName() ?>"/>
+                                    <input type="hidden" name="<?= $block::FORM_COMMAND_ACTION_INPUT_NAME ?>"
+                                           value="<?= $action ?>"/>
+                                    <input type="hidden" name="form_key" value="<?= $block->getFormKey() ?>"/>
+                                    <button type="submit" hidden>Execute</button>
+                                </form>
+                        <?php endforeach; ?>
+                    </li>
+                <?php endif ?>
+                <?php $count++ ?>
+            <?php endforeach; ?>
+        </ul>
+    </li>
+</ul>

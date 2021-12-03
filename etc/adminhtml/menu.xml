@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Fkruidhof_AdminQuickView::main" title="Quick View" module="Fkruidhof_AdminQuickView" sortOrder="99"
+             resource="Fkruidhof_AdminQuickView::quickview"/>
+        <add id="Fkruidhof_AdminQuickView::command" title="Quick View" module="Fkruidhof_AdminQuickView" sortOrder="10"
+             resource="Fkruidhof_AdminQuickView::quickview" parent="Fkruidhof_AdminQuickView::main"/>
+        <!-- content will be replaced with block by plugin -->
+        <add id="Fkruidhof_AdminQuickView::input_placeholder" title="Command Input" module="Fkruidhof_AdminQuickView" sortOrder="10"
+             resource="Fkruidhof_AdminQuickView::quickview" parent="Fkruidhof_AdminQuickView::command"/>
+    </menu>
+</config>
