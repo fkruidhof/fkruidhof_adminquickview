@@ -1,6 +1,6 @@
 # Magento 2 module to quickly access product, order or customer views
 
-##Introduction
+## Introduction
 The Magento 2 backend can be sluggish.
 
 Ever wanted to access a product or order via the backend? Going to the list view, wait for the list to load, enter filter, wait for the results, look for the item you want and click it.... it takes too long if you already know where you want to go.
