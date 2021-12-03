@@ -1,18 +1,16 @@
 {
     "name": "fkruidhof/adminquickview",
     "type": "magento2-module",
-    "version": "v0.9.1-beta",
+    "version": "v1.0.0",
     "license": "OSL-3.0",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "description": "Magento 2 module to quickly acces products, orders and customer from admin menu",
+    "description": "Magento 2 module to quickly access products, orders and customer from admin menu",
     "require": {
         "php": "^7.4",
-        "magento/module-catalog": "104.0.2-p2",
-        "magento/module-cms": "104.0.2-p2",
-        "magento/module-customer": "103.0.2-p2",
-        "magento/module-sales": "103.0.2-p2",
-        "magento/module-theme": "101.1.2",
+        "magento/module-catalog": "^104.0",
+        "magento/module-cms": "^104.0",
+        "magento/module-customer": "^103.0",
+        "magento/module-sales": "^103.0",
+        "magento/module-theme": "^101.0",
         "magento/magento-composer-installer": "*"
     },
     "autoload": {
